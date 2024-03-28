@@ -4,15 +4,19 @@ const { LOG } = require('./constant')
 const { GLOBAL } = require('./config')
 const { userRoute, postRoute, workoutRoute, commentRoute  } = require("./route");
 require("dotenv").config();
-require('colors')
+require('colors');
+const cors = require('cors')
+
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 //routes
 app.get("/", (req, res) => {
    res.json({message: LOG.WELCOME_SERVER});
 });
+
 
 
 /*

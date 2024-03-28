@@ -10,9 +10,27 @@ import { CardActions } from '@mui/material';
 import {TextField} from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {IconButton} from '@mui/material';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 
 //Blog page with 3 cards and different images and content
 const Blog = () => {
+  const [comment, setComment] = useState(null);
+
+  
+  useEffect(() => {
+    axios.get('http://localhost:8081/Comment')
+      .then((response) => {
+        setComment(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(`There was an error retrieving the comment: ${error}`);
+      });
+  }, []);
+
+
   return (
     <div>
   <Box className='blog'>
@@ -60,7 +78,8 @@ const Blog = () => {
         label="Comment"
         inputProps={{style: {fontSize: 20}}} // this changes the input text size
       />
-      <Button variant="contained" type="submit" sx={{
+      <Button 
+       variant="contained" type="submit" sx={{
         backgroundColor: '#796a6a', ":hover": {backgroundColor: 'gray'}
       }}>Submit</Button>      
      <IconButton

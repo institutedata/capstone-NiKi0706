@@ -53,9 +53,11 @@
 
 
 import React, { useState } from 'react'
-import { validateEmail } from './LoginValidation'
+import Validation from './LoginValidation'
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
+import setEmail from './SignUp';
+import setPassword from './SignUp';
 
 
 const PasswordErrorMessage = () => { 
@@ -65,8 +67,6 @@ const PasswordErrorMessage = () => {
  }; 
   
  function SignIn() { 
-  const [firstName, setFirstName] = useState(""); 
-  const [lastName, setLastName] = useState(""); 
   const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState({ 
     value: "", 
@@ -92,13 +92,34 @@ const PasswordErrorMessage = () => {
       isTouched: false, 
     }); 
   }; 
-  
 
-  const handleSubmit = (e) => { 
+  const [errors, setErrors] = useState({});
+  const handleInput = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  }
+  const handleSubmit = (e) => {
     e.preventDefault(); 
     alert("Account created!"); 
     clearForm(); 
-  }; 
+    setErrors(Validation(values));
+    if( errors.email === "" && errors.password === ""){
+      axios.get('http://localhost:8081/api/user/create',values)
+      .then(res => {
+        navigate('/Home')
+      })
+      .catch(err => console.log(err)
+      
+      )
+  }
+}
+  
+
+  // const handleSubmit = (e) => { 
+  //   e.preventDefault(); 
+  //   alert("Account created!"); 
+  //   clearForm(); 
+  // }; 
+  
   
   return ( 
     <Container sx={{
