@@ -13,3 +13,6 @@ const data = await response.json();
 
 return data;
 }
+
+//where the data is fetched from the api - ExerciseDB
+//future implementation - to fetch the data from the database and to secure the API key in .env file

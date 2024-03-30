@@ -2,10 +2,11 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import {Box, Stack, Typography, Button} from '@mui/material';
 
-
+//setting up the exercise card component using the stack, typography and button components from material ui
+//future enhancements would be to replace the image with a gif or video of the exercise
 const ExerciseCard = ({ exercise }) => (
     <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
-      <img src={exercise.name} alt={exercise.description} loading="lazy" />
+      <img src={exercise.name} alt={exercise.description} loading="lazy" /> 
       <Stack direction="row">
         <Button sx={{ ml: '10px', color: '#fff', background: '#796a6a', fontSize: '14px', borderRadius: '10px', textTransform: 'capitalize', width:'40px' }}>
           {exercise.bodyPart}

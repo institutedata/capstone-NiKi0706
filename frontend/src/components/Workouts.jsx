@@ -6,7 +6,7 @@ import WorkoutBanner from './WorkoutBanner';
 import ExerciseVideos from './ExerciseVideos';
 
 
-
+//workout component that will render the workout banner, search exercises, exercises and exercise videos components
 
 const Workouts = () => {
   const[bodyPart, setBodyPart] = useState('all')

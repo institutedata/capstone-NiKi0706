@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.get('/exercise', (req, res) => res.json('exerciseData'));
+// app.get('/exercise', (req, res) => res.json('exerciseData'));
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 
-
+//used a hero image for the home page.. styling is done in the css file
 const Home = () =>{
  
   return ( 

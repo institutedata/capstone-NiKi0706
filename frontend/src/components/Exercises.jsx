@@ -19,7 +19,8 @@ const paginate = (e, value) => {
 
   window.scrollTo({ top: 1800, behavior: 'smooth' });
 };
-
+//fetching the exercises data from the api - exerciseDB
+//fetching the data by focusing on the body part selected by the user
 useEffect(() => {
   const fetchExercisesData = async () => {
     let exercisesData = [];
@@ -36,7 +37,7 @@ useEffect(() => {
   fetchExercisesData();
 }, [bodyPart]);
 
-  
+//returning the exercises component with the exercise card component to display the exercises in more structured way
   return (
 <Box id='exercises'
 sx={{mt: {lg: '110px'}}}

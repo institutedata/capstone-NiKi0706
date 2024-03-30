@@ -10,3 +10,5 @@ const WorkoutBanner = () => (
 );
 
 export default WorkoutBanner;	
+
+//workout banner component I created for the workout page, styling is done in the css file

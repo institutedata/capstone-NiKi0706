@@ -11,7 +11,7 @@ import {TextField} from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {IconButton} from '@mui/material';
 
-//Blog page with 3 cards and different images and content
+//Blog page with 3 cards and different images and content used MUI for structure
 const Blog = () => {
   return (
     <div>

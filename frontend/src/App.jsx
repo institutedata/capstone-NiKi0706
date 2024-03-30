@@ -8,7 +8,8 @@ import Navbar from './components/Navbar'
 import SignUp from './components/SignUp';
 import './index.css';
 
-
+//importing the components and the navbar component
+//routing for the components using the browser router, route and routes components from react router dom
 function App () {
   return (
     <>

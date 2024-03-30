@@ -25,9 +25,9 @@ const SignIn = () => {
     e.preventDefault();
     setErrors(Validation(values));
     console.log("Validation errors:", errors); // Log current errors state
-
+    // If there are no errors, submit the form
     if(errors.email === "" && errors.password === "") {
-      axios.get('http://localhost:8081/api/user/', values)
+      axios.get('http://localhost:8081/api/user/', values)  //this is the api endpoint in my backend
       .then(res => {
         navigate('/Home')
       })

@@ -17,3 +17,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+//basic navbar component with links to the home, blog, workout and sign in pages used MUI for the styling

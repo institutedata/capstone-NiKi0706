@@ -2,7 +2,7 @@
 import React from 'react'
 import {Stack, Typography} from '@mui/material';
 
-
+//setting up the body part component using the stack and typography components from material ui
 
 const BodyPart = ({item, setBodyPart, bodyPart}) => {
   return (

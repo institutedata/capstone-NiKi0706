@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => { 
 
+  //schema for the sign up form
 
   const [values, setValues] = useState({
     firstName: '',
@@ -28,7 +29,7 @@ const SignUp = () => {
     setErrors(Validation(values));
 
     if(errors.firstName === "" && errors.lastName === "" && errors.email === "" && errors.password === "") {
-      axios.post('http://localhost:8081/api/user/create', values)
+      axios.post('http://localhost:8081/api/user/create', values)  //api endpoint
       .then(res => {
         navigate('/SignIn')
       })

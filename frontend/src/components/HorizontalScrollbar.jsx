@@ -49,5 +49,5 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
 
 export default HorizontalScrollbar
 
-
+// make sure to download the correct version for the horizontal scrollbar, latest version has some errors.
 //Thanks to javascriptmastery for some very helpful tips and tricks.

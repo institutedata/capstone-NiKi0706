@@ -8,6 +8,10 @@ import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 
+//importing the exercise videos component to display the exercise videos
+//Just manually added some exercise videos to display on the website
+//future enhancements would be to fetch the exercise videos from an api
+
 const ExerciseVideos = () => {
   return (
     <Box sx={{marginTop: {lg:'200px', xs: '20px'}}} p='20px'>

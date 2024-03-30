@@ -16,7 +16,7 @@ const getAPIWorkout = async (res) => {
     let options = {
         method: 'GET',
         url: process.env.API_URL,
-        params: {muscle: 'biceps'},
+        params: {limit : '10'},
         headers: {
             'X-RapidAPI-Key':  process.env.API_KEY,
             'X-RapidAPI-Host':  process.env.API_HOST
