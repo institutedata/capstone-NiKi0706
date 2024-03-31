@@ -280,7 +280,7 @@ input[type='button'] {
 }
 
 
-.blog {
+/* .blog {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
   url("https://st2.depositphotos.com/1420973/6409/i/450/depositphotos_64095317-stock-photo-blog-concept-cloud-chart-print.jpg");
 height: 400px;
@@ -294,7 +294,7 @@ align-items: center;
 color: #f7f4f4;
 font-size: 4rem;
 
-}
+} */
 
 .blogsContainer{
   padding-top: themespacing(3);

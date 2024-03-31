@@ -10,6 +10,7 @@ import { CardActions } from '@mui/material';
 import {TextField} from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {IconButton} from '@mui/material';
+import { Link } from 'react-router-dom';
 
 //Blog page with 3 cards and different images and content used MUI for structure
 const Blog = () => {
@@ -397,6 +398,12 @@ Hikes and Walks: Best walks I've done
   </Grid>
 </Grid>
 </Container>
+     {/* Add a button to navigate to the page where you can create a new post */}
+     <Box textAlign="center" mt={4}>
+        <Link to="/CreatePost" style={{ textDecoration: 'none' }}>
+          <Button variant="contained" type='submit' color='primary'>Create New Post</Button>
+        </Link>
+      </Box>
 </div>
   )
 }
