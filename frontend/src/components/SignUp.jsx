@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SignIn from './SignIn';
 import Validation from './SignUpValidation';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -21,14 +20,15 @@ const SignUp = () => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState({})
   const handleInput = (e) => {
-    setValues(prev =>({...prev, [e.target.name]: [e.target.value]}))
+    setValues(prev => ({...prev, [e.target.name]: e.target.value}))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors(Validation(values));
-
-    if(errors.firstName === "" && errors.lastName === "" && errors.email === "" && errors.password === "") {
+    const validationErrors = Validation(values);
+    setErrors(validationErrors);
+  
+    if (Object.values(validationErrors).every(error => error === "")) {
       axios.post('http://localhost:8081/api/user/create', values)  //api endpoint
       .then(res => {
         navigate('/SignIn')
@@ -47,25 +47,26 @@ const SignUp = () => {
       <form action="" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="firstName"className="text-light-gray"><strong>FirstName</strong></label>
-          <input type="text" placeholder="Enter FirstName" name='firstName' onChange={handleInput}
+          <input type="text" id='firstName' placeholder="Enter FirstName" name='firstName' onChange={handleInput}
            className='form-control rounded-0'/>
           {errors.firstName && <span className="text-danger"> {errors.firstName}</span>}
         </div>
         <div className="mb-3">
           <label htmlFor="lastName"className="text-light-gray"><strong>LastName</strong></label>
-          <input type="text" placeholder="Enter LastName" name='lastName' onChange={handleInput}
+          <input type="text" id='lastName' placeholder="Enter LastName" name='lastName' onChange={handleInput}
           className='form-control rounded-0'/>
           {errors.lastName && <span className="text-danger"> {errors.lastName}</span>}
         </div>
         <div className="mb-3">
         <label htmlFor="email" className="text-light-gray"><strong>Email</strong></label>
-          <input type="email" placeholder="Enter Email" name='email' onChange={handleInput}
+          <input type="email" id='emailInput' placeholder="Enter Email" name='email' onChange={handleInput}
+          autoComplete='email'
           className='form-control rounded-0'/>
           {errors.email && <span className="text-danger"> {errors.email}</span>}
         </div>
         <div className="mb-3">
           <label htmlFor="password"className="text-light-gray"><strong>Password</strong></label>
-          <input type="password" placeholder="Enter Password" name='password' onChange={handleInput}
+          <input type="password" id="passwordInput" placeholder="Enter Password" name='password' onChange={handleInput}
           className="form-control rounded-0" />
           {errors.password && <span className="text-danger"> {errors.password}</span>}
         </div>

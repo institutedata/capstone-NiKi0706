@@ -59,6 +59,7 @@ app.use("/api/workout", workoutRoute);
 
 
 
+
 // options mounted for workout api request
 exports.option = GLOBAL.API_OPTIONS(process.env, 'biceps')
 

@@ -8,8 +8,7 @@ const WorkoutSchema = new Schema({
     id: { type: String, trim: true, required: true },
     name: { type: String, trim: true},
     target: { type: String, trim: true, required: true },
-    secondaryMuscle: { type: String, trim: true, required: true },
-    instructions: { type: String, trim: true, required: true },
+   
 
 
     // name: { type: String, trim: true, required: true },

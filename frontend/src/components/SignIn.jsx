@@ -1,5 +1,5 @@
 
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Validation from './LoginValidation';
@@ -23,13 +23,19 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors(Validation(values));
-    console.log("Validation errors:", errors); // Log current errors state
+
+    const validationErrors = Validation(values);
+    setErrors(validationErrors);
+    // console.log("Validation errors:", errors); // Log current errors state
     // If there are no errors, submit the form
     if(errors.email === "" && errors.password === "") {
-      axios.get('http://localhost:8081/api/user/', values)  //this is the api endpoint in my backend
+      axios.get('http://localhost:8081/api/user', values)  //this is the api endpoint in my backend
       .then(res => {
-        navigate('/Home')
+        if(res.data === 'success') {
+          navigate('/')
+        } else {
+          alert('no record exists')
+        }
       })
       .catch(err => {
         console.log(err)
@@ -45,13 +51,14 @@ const SignIn = () => {
       <form action="" onSubmit={handleSubmit}>
         <div className="mb-3">
         <label htmlFor="email" className="text-light-gray"><strong>Email</strong></label>
-          <input type="email" placeholder="Enter Email" name='email' onChange={handleInput}
+          <input type="email" id="emailInput" placeholder="Enter Email" name='email' onChange={handleInput}
+          autoComplete='email'
           className='form-control rounded-0'/>
           {errors.email && <span className="text-danger"> {errors.email}</span>}
         </div>
         <div className="mb-3">
           <label htmlFor="password"className="text-light-gray"><strong>Password</strong></label>
-          <input type="password" placeholder="Enter Password" name='password' onChange={handleInput}
+          <input type="password" id="passwordInput" placeholder="Enter Password" name='password' onChange={handleInput}
           className="form-control rounded-0" />
           {errors.password && <span className="text-danger"> {errors.password}</span>}
         </div>
