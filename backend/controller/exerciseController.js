@@ -7,8 +7,8 @@ const getAPIExercise = async (res) => {
             url: 'https://exercisedb.p.rapidapi.com/exercises',
             params: {bodyPart : 'waist'},
             headers: {
-                'X-RapidAPI-Key':  'c7f7ea136cmshc530c01bf71ff71p141257jsn95c25dc7f9a8',
-                'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com' 
+                'X-RapidAPI-Key':  process.env.API_KEY,
+                'X-RapidAPI-Host': process.env.API_HOST
             }
           }; 
 try {
@@ -23,7 +23,7 @@ try {
 const getAllExercise = async(req, res) => {
   const exercise = await Exercise.find({})
 
-  console.log('BODY: ',req.params.bodyPart)
+//   console.log('BODY: ',req.params.bodyPart)
   try {
       res.status(200).send({ success: true, message: 'All Exercise Fetched', data: exercise});
   } catch (error) {

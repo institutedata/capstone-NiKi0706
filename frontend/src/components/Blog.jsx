@@ -401,7 +401,9 @@ Hikes and Walks: Best walks I've done
      {/* Add a button to navigate to the page where you can create a new post */}
      <Box textAlign="center" mt={4}>
         <Link to="/CreatePost" style={{ textDecoration: 'none' }}>
-          <Button variant="contained" type='submit' color='primary'>Create New Post</Button>
+        <Button variant="contained" type="submit" sx={{
+         backgroundColor: '#796a6a', ":hover": {backgroundColor: 'gray'}
+      }}>Create new post</Button>   
         </Link>
       </Box>
 </div>

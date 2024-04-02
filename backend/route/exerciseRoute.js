@@ -14,7 +14,11 @@ router.get('/:bodyPart', (req, res) => {
     exerciseController.getAllExercise(req, res)
 })
 
-router.post('/', (req, res) => {
+router.get('/single/:id', (req, res) => {
+    exerciseController.getExercise(req, res)
+})
+
+router.post('/create', (req, res) => {
     exerciseController.createExercise(req, res)
 })
 
