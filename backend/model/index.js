@@ -5,4 +5,5 @@ module.exports = {
     Post:  require('./post'),
     Comment:  require('./comment'),
     Workout: require('./workout'),
+    Exercise: require('./exercise'),
 };

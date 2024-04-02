@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ExerciseSchema = new Schema({
-    bodyPart: { type: String, trim: true, required: true },
+    bodyPart: { type: String, required: true },
     equipment: { type: String, trim: true, required: true },
     gifUrl: { type: String, trim: true, required: true },
     id: { type: String, trim: true, required: true },
@@ -14,5 +14,5 @@ const ExerciseSchema = new Schema({
         collection: "Exercise"
     });
 
-const Workout = mongoose.model('Exercise', ExerciseSchema);
+const Exercise = mongoose.model('Exercise', ExerciseSchema);
 module.exports = Exercise;

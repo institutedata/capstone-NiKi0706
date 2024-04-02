@@ -17,6 +17,7 @@ This application is designed to help users to read articles and personal experie
 •	Users can engage with the community by commenting on blog posts.
 •	This feature allows users to share their thoughts, ask questions, and provide support to others.
 •	Articles covered would be fitness and health related.
+•	Feature to create a new post by user is also available, but needs future development and deployment.
 
 ### Access Workouts
 
@@ -68,7 +69,7 @@ This application is designed to help users to read articles and personal experie
 ## Installation
 
 1. Clone the repository: 
-•	
+•	git@github.com:institutedata/capstone-NiKi0706.git
 2. Install the dependencies: 
 •	cd capstone-project, 
 •	npm install.
@@ -80,5 +81,5 @@ This application is designed to help users to read articles and personal experie
 
 ## Contributing
 
-We welcome contributions from the community. Please read our contributing guidelines before submitting a pull request.
+
 

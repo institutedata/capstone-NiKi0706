@@ -1,19 +1,24 @@
 
 const express = require('express')
-const router = express.Router()
 const {exerciseController} = require('../controller')
 
+const router = express.Router()
 
 
-router.get('/', (req, res) => {
-    exerciseController.getExercise(req, res)
+
+router.get('/search', (req, res) => {
+    exerciseController.getAPIExercise(res);
 })
 
-router.post('/create', (req, res) => {
+router.get('/:bodyPart', (req, res) => {
+    exerciseController.getAllExercise(req, res)
+})
+
+router.post('/', (req, res) => {
     exerciseController.createExercise(req, res)
 })
 
-router.delete('/delete', (req, res) => {
+router.delete('/:id', (req, res) => {
     exerciseController.deleteExercise(req, res)
 })
 
