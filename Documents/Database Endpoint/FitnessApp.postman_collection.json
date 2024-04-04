@@ -29,18 +29,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{8081}}{{WORKOUT}}/:workoutId",
+							"raw": "{{8081}}{{WORKOUT}}",
 							"host": [
 								"{{8081}}{{WORKOUT}}"
-							],
-							"path": [
-								":workoutId"
-							],
-							"variable": [
-								{
-									"key": "workoutId",
-									"value": "65e3dedfb62a7c899fb6dcb1"
-								}
 							]
 						}
 					},
@@ -133,23 +124,17 @@
 					"name": "Create a User",
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"firstName\":\"Jimmy\",\r\n    \"lastName\": \"_Taylor\",\r\n    \"email\": \"jimmy@email.com\",\r\n    \"password\": \"78787878\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
 							}
-						},
+						],
 						"url": {
-							"raw": "{{8081}}{{USER}}/create",
+							"raw": "{{8081}}{{USER}}",
 							"host": [
 								"{{8081}}{{USER}}"
-							],
-							"path": [
-								"create"
 							]
 						}
 					},
@@ -187,12 +172,18 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{8081}}{{USER}}/update",
+							"raw": "{{8081}}{{USER}}/update?id=66090a8ffed667d676ff7cbf",
 							"host": [
 								"{{8081}}{{USER}}"
 							],
 							"path": [
 								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "66090a8ffed667d676ff7cbf"
+								}
 							]
 						}
 					},
@@ -204,12 +195,18 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{8081}}{{USER}}/delete",
+							"raw": "{{8081}}{{USER}}/delete?id=65e11aad4e99b85850a56b8a",
 							"host": [
 								"{{8081}}{{USER}}"
 							],
 							"path": [
 								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65e11aad4e99b85850a56b8a"
+								}
 							]
 						}
 					},
@@ -225,22 +222,13 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"title\":\"Testing \",\r\n  \"description\": \"Testing\",\r\n  \"image\": \"https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?s=612x612&w=0&k=20&c=v48RE0ZNWpMZOlSp13KdF1yFDmidorO2pZTu2Idmd3M=\",\r\n  \"userID\": \"1\",\r\n  \"likes\": \"0\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "{{8081}}{{POST}}/create",
+							"raw": "{{8081}}{{POST}}/",
 							"host": [
 								"{{8081}}{{POST}}"
 							],
 							"path": [
-								"create"
+								""
 							]
 						}
 					},
@@ -392,6 +380,305 @@
 							],
 							"path": [
 								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercise",
+			"item": [
+				{
+					"name": "Get API exercise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/search?bodyPart=waist&bodyPart=cardio",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"search"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "waist"
+								},
+								{
+									"key": "bodyPart",
+									"value": "cardio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Api",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "c7f7ea136cmshc530c01bf71ff71p141257jsn95c25dc7f9a8",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "exercisedb.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://exercisedb.p.rapidapi.com/exercises?bodyPart=lower arms&bodyPart=waist&bodyPart=cardio&bodyPart=lower legs&bodyPart=chest&bodyPart=upper legs",
+							"protocol": "https",
+							"host": [
+								"exercisedb",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"exercises"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "lower arms"
+								},
+								{
+									"key": "bodyPart",
+									"value": "waist"
+								},
+								{
+									"key": "bodyPart",
+									"value": "cardio"
+								},
+								{
+									"key": "bodyPart",
+									"value": "lower legs"
+								},
+								{
+									"key": "bodyPart",
+									"value": "chest"
+								},
+								{
+									"key": "bodyPart",
+									"value": "upper legs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Body Part",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/:bodyPart?bodyPart=legs&bodyPart=cardio&bodyPart=chest",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								":bodyPart"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "legs"
+								},
+								{
+									"key": "bodyPart",
+									"value": "cardio"
+								},
+								{
+									"key": "bodyPart",
+									"value": "chest"
+								}
+							],
+							"variable": [
+								{
+									"key": "bodyPart",
+									"value": "lower legs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Exercises",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/:bodyPart?bodyPart=waist",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								":bodyPart"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "waist"
+								}
+							],
+							"variable": [
+								{
+									"key": "bodyPart",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Exercise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/single/:id",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"single",
+								":id"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "cardio",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "chest"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Exercise",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"bodyPart\": \"waist\",\r\n      \"equipment\": \"body weight\",\r\n      \"gifUrl\": \"https://v2.exercisedb.io/image/Kut5Y3EjiGir9P\",\r\n      \"id\": \"0001\",\r\n      \"name\": \"3/4 sit-up\",\r\n      \"target\": \"abs\",\r\n      \"secondaryMuscles\": [\r\n        \"hip flexors\",\r\n        \"lower back\"\r\n      ],\r\n      \"instructions\": [\r\n        \"Lie flat on your back with your knees bent and feet flat on the ground.\",\r\n        \"Place your hands behind your head with your elbows pointing outwards.\",\r\n        \"Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.\",\r\n        \"Pause for a moment at the top, then slowly lower your upper body back down to the starting position.\",\r\n        \"Repeat for the desired number of repetitions.\"\r\n      ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}/exercise/create",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Exercise",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"bodyPart\": \"waist\",\r\n      \"equipment\": \"body weight\",\r\n      \"gifUrl\": \"https://v2.exercisedb.io/image/Kut5Y3EjiGir9P\",\r\n      \"id\": \"0001\",\r\n      \"name\": \"3/4 sit-up\",\r\n      \"target\": \"abs\",\r\n      \"secondaryMuscles\": [\r\n        \"hip flexors\",\r\n        \"lower back\"\r\n      ],\r\n      \"instructions\": [\r\n        \"Lie flat on your back with your knees bent and feet flat on the ground.\",\r\n        \"Place your hands behind your head with your elbows pointing outwards.\",\r\n        \"Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.\",\r\n        \"Pause for a moment at the top, then slowly lower your upper body back down to the starting position.\",\r\n        \"Repeat for the desired number of repetitions.\"\r\n      ]\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}/exercise/update",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Exercise",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/:id?id=660c942cd95a4ffbeb19826e",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								":id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "660c942cd95a4ffbeb19826e"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "0003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "importExercises",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/import?bodyPart=chest",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"import"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "chest"
+								}
 							]
 						}
 					},

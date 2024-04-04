@@ -7,11 +7,11 @@
 2.	Market Needs: 
     •   There is a growing demand for online resources and communities focused on fitness and wellness, especially considering the increasing popularity of health and fitness trends.
 3.	Business Goals: 
-    •   The main goal of this application is to provide a platform where woman can enjoy reading about health and fitness articles and able to keep active by following along with the exercises.
+    •   The main goal of this application is to provide a platform where woman can enjoy reading about health and fitness articles and able to keep active by following along with the exercises. They can also become part of the fitness commmunity through social media.
 
 
 ## Stakeholder Engagement
-1.	Stakeholder: Primary stakeholders are our users – women looking for a fitness platform that respects their privacy and give them opportunity to keep active in the comfort of their own homes.
+1.	Stakeholder: Primary stakeholders are our users – women looking for a fitness platform that respects their privacy and give them opportunity to keep active in the comfort of their own homes. Provide opportunity to become part of the social community.
 2.	Engagement: We aim to engage with them through surveys, feedback forms and social media to understand their needs and preference.
 3.	Communication: Regular communication through e-newsletters ensure all stakeholders feel valued and heard.
 

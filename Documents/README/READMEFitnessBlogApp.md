@@ -1,4 +1,4 @@
-# Fitness Blog App
+# FitFlash for women
 
 ## Description
 

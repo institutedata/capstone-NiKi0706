@@ -30,6 +30,9 @@ router.put('/update', (req, res) => {
     exerciseController.updateExercise(req, res)
 })
 
+router.post('/import', (req, res) => {
+    exerciseController.importExercises(req, res)
+})
 
 const exerciseRoute = router
 module.exports = exerciseRoute;

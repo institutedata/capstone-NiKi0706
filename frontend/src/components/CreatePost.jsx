@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const CreatePost = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const CreatePost = () => {
     image: ''
     // Add more fields as needed
   });
+  
+  const navigate = useNavigate();
 
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,6 +20,9 @@ const CreatePost = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:8081/api/post/create', formData);
+    
+      navigate('/Blog');
+     
       // Optionally, you can redirect the user to another page after successful creation
     } catch (error) {
       console.error('Error creating post:', error);
