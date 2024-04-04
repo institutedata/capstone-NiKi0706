@@ -8,7 +8,6 @@ const Home = () =>{
  
   return ( 
     <div className="">
-    
         <div className="hero">
         <img src=""  className="hero" />
         </div>

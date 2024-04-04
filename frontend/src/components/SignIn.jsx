@@ -12,7 +12,8 @@ const SignIn = () => {
 
   const [values, setValues] = useState({
     email: '',
-    password: ''
+    password: '',
+    firstName: '',
   })
 
   const navigate = useNavigate();
@@ -28,18 +29,22 @@ const SignIn = () => {
     setErrors(validationErrors);
     // console.log("Validation errors:", errors); // Log current errors state
     // If there are no errors, submit the form
-    if(errors.email === "" && errors.password === "") {
-      axios.get('http://localhost:8081/api/user', values)  //this is the api endpoint in my backend
-      .then(res => {
-        if(res.data === 'success') {
-          navigate('/')
-        } else {
-          alert('no record exists')
-        }
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    if (Object.values(validationErrors).every(error => error === "")) {
+      axios.get('http://localhost:8081/api/user/', values)  //this is the api endpoint in my backend
+        .then(res => {
+          // console.log('API Response:', res.data);
+          // if (res.data && res.data.length > 0) { // Check if any records are found
+            navigate("/")
+            alert('Welcome to FitFlash Women !'); // Show alert if login is successful
+        })// Redirect to home page
+        //   } else {
+        //     alert('No records found'); // Show alert if no records are found
+        //   }
+        // })
+        .catch(err => {
+          console.error('Error fetching data:', err);
+          alert('An error occurred. Please try again.'); // Show alert for any errors
+        });
   }
   }
 
