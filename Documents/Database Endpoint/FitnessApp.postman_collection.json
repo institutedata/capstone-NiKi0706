@@ -1,0 +1,690 @@
+{
+	"info": {
+		"_postman_id": "98f7c413-d6f8-4a80-8bfa-3a4030984262",
+		"name": "FitnessApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33313690"
+	},
+	"item": [
+		{
+			"name": "Workout",
+			"item": [
+				{
+					"name": "Get All Workouts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{WORKOUT}}",
+							"host": [
+								"{{8081}}{{WORKOUT}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a  Workout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{WORKOUT}}",
+							"host": [
+								"{{8081}}{{WORKOUT}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Workout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n {\r\n    \"name\": \"Hammer Curls\",\r\n    \"type\": \"strength\",\r\n    \"muscle\": \"biceps\",\r\n    \"equipment\": \"dumbbell\",\r\n    \"level\": \"intermediate\",\r\n    \"instructions\": \"Stand up with your torso upright and a dumbbell on each hand being held at arms length. The elbows should be close to the torso. The palms of the hands should be facing your torso. This will be your starting position. Now, while holding your upper arm stationary, exhale and curl the weight forward while contracting the biceps. Continue to raise the weight until the biceps are fully contracted and the dumbbell is at shoulder level. Hold the contracted position for a brief moment as you squeeze the biceps. Tip: Focus on keeping the elbow stationary and only moving your forearm. After the brief pause, inhale and slowly begin the lower the dumbbells back down to the starting position. Repeat for the recommended amount of repetitions.  Variations: There are many possible variations for this movement. For instance, you can perform the exercise sitting down on a bench with or without back support and you can also perform it by alternating arms; first lift the right arm for one repetition, then the left, then the right, etc.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}{{WORKOUT}}",
+							"host": [
+								"{{8081}}{{WORKOUT}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Workout",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"_delete-me please!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}{{WORKOUT}}/:workoutId",
+							"host": [
+								"{{8081}}{{WORKOUT}}"
+							],
+							"path": [
+								":workoutId"
+							],
+							"variable": [
+								{
+									"key": "workoutId",
+									"value": "65e3dedfb62a7c899fb6dcb1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Workout",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{WORKOUT}}/:workoutId",
+							"host": [
+								"{{8081}}{{WORKOUT}}"
+							],
+							"path": [
+								":workoutId"
+							],
+							"variable": [
+								{
+									"key": "workoutId",
+									"value": "65e3dedfb62a7c899fb6dcab"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{8081}}{{USER}}",
+							"host": [
+								"{{8081}}{{USER}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}{{USER}}",
+							"host": [
+								"{{8081}}{{USER}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{USER}}/update?id=66090a8ffed667d676ff7cbf",
+							"host": [
+								"{{8081}}{{USER}}"
+							],
+							"path": [
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "66090a8ffed667d676ff7cbf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{USER}}/delete?id=65e11aad4e99b85850a56b8a",
+							"host": [
+								"{{8081}}{{USER}}"
+							],
+							"path": [
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65e11aad4e99b85850a56b8a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create new Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{POST}}/",
+							"host": [
+								"{{8081}}{{POST}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{POST}}",
+							"host": [
+								"{{8081}}{{POST}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"_delete-me please!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}{{POST}}/update?postId=65e505e6728bb6747954d065",
+							"host": [
+								"{{8081}}{{POST}}"
+							],
+							"path": [
+								"update"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "65e505e6728bb6747954d065"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{POST}}/delete",
+							"host": [
+								"{{8081}}{{POST}}"
+							],
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Post a comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"Hello my name is\",\r\n    \"postId\": \"65e12013015295b2869f1e56\",\r\n    \"userId\":\"65e4fe292861de06474020d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}{{COMMENT}}/create",
+							"host": [
+								"{{8081}}{{COMMENT}}"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{COMMENT}}",
+							"host": [
+								"{{8081}}{{COMMENT}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"Amazing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}{{COMMENT}}/update",
+							"host": [
+								"{{8081}}{{COMMENT}}"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}{{COMMENT}}/delete",
+							"host": [
+								"{{8081}}{{COMMENT}}"
+							],
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercise",
+			"item": [
+				{
+					"name": "Get API exercise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/search?bodyPart=waist&bodyPart=cardio",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"search"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "waist"
+								},
+								{
+									"key": "bodyPart",
+									"value": "cardio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Api",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "c7f7ea136cmshc530c01bf71ff71p141257jsn95c25dc7f9a8",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "exercisedb.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://exercisedb.p.rapidapi.com/exercises?bodyPart=lower arms&bodyPart=waist&bodyPart=cardio&bodyPart=lower legs&bodyPart=chest&bodyPart=upper legs",
+							"protocol": "https",
+							"host": [
+								"exercisedb",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"exercises"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "lower arms"
+								},
+								{
+									"key": "bodyPart",
+									"value": "waist"
+								},
+								{
+									"key": "bodyPart",
+									"value": "cardio"
+								},
+								{
+									"key": "bodyPart",
+									"value": "lower legs"
+								},
+								{
+									"key": "bodyPart",
+									"value": "chest"
+								},
+								{
+									"key": "bodyPart",
+									"value": "upper legs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Body Part",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/:bodyPart?bodyPart=legs&bodyPart=cardio&bodyPart=chest",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								":bodyPart"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "legs"
+								},
+								{
+									"key": "bodyPart",
+									"value": "cardio"
+								},
+								{
+									"key": "bodyPart",
+									"value": "chest"
+								}
+							],
+							"variable": [
+								{
+									"key": "bodyPart",
+									"value": "lower legs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Exercises",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/:bodyPart?bodyPart=waist",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								":bodyPart"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "waist"
+								}
+							],
+							"variable": [
+								{
+									"key": "bodyPart",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Exercise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/single/:id",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"single",
+								":id"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "cardio",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "chest"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Exercise",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"bodyPart\": \"waist\",\r\n      \"equipment\": \"body weight\",\r\n      \"gifUrl\": \"https://v2.exercisedb.io/image/Kut5Y3EjiGir9P\",\r\n      \"id\": \"0001\",\r\n      \"name\": \"3/4 sit-up\",\r\n      \"target\": \"abs\",\r\n      \"secondaryMuscles\": [\r\n        \"hip flexors\",\r\n        \"lower back\"\r\n      ],\r\n      \"instructions\": [\r\n        \"Lie flat on your back with your knees bent and feet flat on the ground.\",\r\n        \"Place your hands behind your head with your elbows pointing outwards.\",\r\n        \"Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.\",\r\n        \"Pause for a moment at the top, then slowly lower your upper body back down to the starting position.\",\r\n        \"Repeat for the desired number of repetitions.\"\r\n      ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}/exercise/create",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Exercise",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"bodyPart\": \"waist\",\r\n      \"equipment\": \"body weight\",\r\n      \"gifUrl\": \"https://v2.exercisedb.io/image/Kut5Y3EjiGir9P\",\r\n      \"id\": \"0001\",\r\n      \"name\": \"3/4 sit-up\",\r\n      \"target\": \"abs\",\r\n      \"secondaryMuscles\": [\r\n        \"hip flexors\",\r\n        \"lower back\"\r\n      ],\r\n      \"instructions\": [\r\n        \"Lie flat on your back with your knees bent and feet flat on the ground.\",\r\n        \"Place your hands behind your head with your elbows pointing outwards.\",\r\n        \"Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.\",\r\n        \"Pause for a moment at the top, then slowly lower your upper body back down to the starting position.\",\r\n        \"Repeat for the desired number of repetitions.\"\r\n      ]\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{8081}}/exercise/update",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Exercise",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/:id?id=660c942cd95a4ffbeb19826e",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								":id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "660c942cd95a4ffbeb19826e"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "0003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "importExercises",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{8081}}/exercise/import?bodyPart=chest",
+							"host": [
+								"{{8081}}"
+							],
+							"path": [
+								"exercise",
+								"import"
+							],
+							"query": [
+								{
+									"key": "bodyPart",
+									"value": "chest"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
