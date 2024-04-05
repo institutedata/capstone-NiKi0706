@@ -19,10 +19,16 @@ const CreatePost = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8081/api/post/create', formData);
-    
-      navigate('/Blog');
+      const response = await axios.post('http://localhost:8081/api/post/create', formData);
+      console.log('Server response:', response.data);
+
+       // Assuming the response contains the ID of the newly created post
+      const postId = response.data.id;
+      navigate(`/post/${postId}`);
      
+    // Display a success message
+    alert('Post created successfully!');
+    
       // Optionally, you can redirect the user to another page after successful creation
     } catch (error) {
       console.error('Error creating post:', error);

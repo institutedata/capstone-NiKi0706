@@ -7,6 +7,7 @@ import SignIn from './components/SignIn';
 import Navbar from './components/Navbar'
 import SignUp from './components/SignUp';
 import CreatePost from './components/CreatePost';
+import PostPage from './components/PostPage';
 import './index.css';
 
 //importing the components and the navbar component
@@ -23,6 +24,7 @@ function App () {
         <Route path="/Workout" element={<Workouts />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/CreatePost" element={<CreatePost />} />
+        <Route path="/post/:id" element={<PostPage />} />
       </Route>
     </Routes>
     </>

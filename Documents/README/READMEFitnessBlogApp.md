@@ -2,7 +2,7 @@
 
 ## Description
 
-This application is designed to help users to read articles and personal experiences, and access workout routines. Users can sign in, comment on blogs, and access a variety of workouts mainly designed for female audience.
+This application is designed to help users to read articles and personal experiences, and access workout routines. Users can sign in, create posts, comment on blogs, and access a variety of workouts mainly designed for female audience.
 
 ## Features
 
@@ -17,14 +17,14 @@ This application is designed to help users to read articles and personal experie
 •	Users can engage with the community by commenting on blog posts.
 •	This feature allows users to share their thoughts, ask questions, and provide support to others.
 •	Articles covered would be fitness and health related.
-•	Feature to create a new post by user is also available, but needs future development and deployment.
+•	Feature to create a new post by user is also available, which allows user to sign in to app and post appropriate content to blog section. Encourages engagement with other users.
 
 ### Access Workouts
 
-•	Users can access a variety of workout routines. 
+•	Users can access a variety of workout exercises for all bodyparts. 
 •	Searching by bodyPart or by accessing through clicking on exercise card.
 •	Each exercise shows a gif image to explain the exercise.
-•	Included in the workouts are videos imported from YouTube to watch.
+•	Included in the workout section are videos imported from YouTube to watch. 
 
 ## Usage
 
@@ -36,12 +36,17 @@ This application is designed to help users to read articles and personal experie
 2. Browsing Blog Articles
 •	From the home page, click on the “Blog” section in the navigation bar.
 •	Browse through the list of articles.
-•	Scroll down to read the comments and leave your own comment if desired.
+•	Scroll down to the bottom of the page and if user desires to create post the user would be directed to 'Create Post' page.
+•	Another functionality would be to add comment or like articles or posts. This is still in development stages.
+
 
 3. Accessing Workouts
 •	Navigate to the “Workout” section in the navigation bar.
 •	Browse or search for workout routines based on your preference.
 •	Click on card selection or type in the search bar your exercise.
+•	Result of seatch would be displayed at the bottom of the workout page.
+•	The option to browse workout videos are available in the workout section.
+
 
 ## Future Enhancements
 
@@ -54,11 +59,11 @@ This application is designed to help users to read articles and personal experie
 •	Building functionality where post can be created each and keep track of that in database.
 
 3. Interactive workouts:
-•	Finding a way to replace the gif URL.
-•	Adding more videos that aligns with each body part exercise.
+•	Finding a way to replace the gif URL with female gif URL to align with design.
+•	Adding more videos that aligns with each body part exercise. Build in the functionality that videos automatically update each week.
 
 3. Mobile Application:
-•	Develop a mobile application version for the Fitness Blog App for on-the-go access.
+•	Develop a fully functional mobile application version for the Fitness Blog App for on-the-go access.
 
 ## Technologies Used
 •	Frontend: React.js, Material UI, bootstrap
@@ -72,14 +77,15 @@ This application is designed to help users to read articles and personal experie
 •	git@github.com:institutedata/capstone-NiKi0706.git
 2. Install the dependencies: 
 •	cd capstone-project, 
-•	npm install.
+•	npm install
+
 3. Set up environment variables:
 •	Create a ‘. env’ file in root directory
 •	Define environment variables for database connection, API keys, etc.
 4. Run the application
 •	npm start.
 
-## Contributing
+
 
 
 
